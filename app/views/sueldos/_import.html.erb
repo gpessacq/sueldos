@@ -1,0 +1,22 @@
+<%= flash[:notice] %>
+
+<h2>Importar archivos de sueldos</h2>
+
+<div class="jumbotron">
+	<div class="container">
+		<h4>1. Obtener el archivo de sueldos:</h4>
+		<br>
+	<a href= "http://data.buenosaires.gob.ar/dataset/sueldo-funcionarios" target="_blank">
+	<strong>- Sueldos de funcionarios -</strong> Laboratorio de Gobierno de la Ciudad Autónoma de Buenos Aires</a>  
+		<br>
+		<h4>2. Elegir el archivo CSV descargado:</h4>
+		<br>
+		<%= form_tag import_sueldos_path, multipart: true do %>
+		  <%= file_field_tag :file , :class => 'btn btn-default' %><br>
+		  <%= submit_tag "Importar", :class => 'btn btn-primary' %>
+		
+		<% end %>
+	</div>
+    <br>	
+
+</div>

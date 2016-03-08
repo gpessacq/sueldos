@@ -1,0 +1,23 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Cargo</th>
+      <th>Fecha</th>      
+      <th>Asignación Mensual</th>
+      <th>Liquido</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= will_paginate %>     
+    <% @sueldos.each do |funcionario| %>
+      <tr>
+        <td><%= funcionario.cargo %></td> 
+        <td><%= funcionario.nromes.to_s + "-" + funcionario.anio.to_s %></td>        
+        <td><%= number_to_currency(funcionario.asig_mensuales) %></td>              
+        <td><%= number_to_currency(funcionario.liquido) %></td>
+       </tr>
+    <% end %>
+  </tbody>
+</table>
+    <%= will_paginate %> 
+<br>

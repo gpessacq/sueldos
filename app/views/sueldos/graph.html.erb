@@ -1,0 +1,12 @@
+<h2>Gráfico de Sueldos</h2>
+
+<%= flash[:notice] %>
+
+<%= render 'month_header' %>
+
+<%= content_tag :div, "", id: "sueldos-graph", data: {sueldos: @sueldos} %>
+
+<%= render 'source' %>
+
+<%= render 'listing' %>
+

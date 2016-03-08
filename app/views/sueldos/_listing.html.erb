@@ -1,0 +1,23 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th><%= sortable "apellido", "Nombre y apellido", @mes_nombre, @mes, @anio  %></th>
+      <th><%= sortable "cargo", @mes_nombre, @mes, @anio  %></th>
+      <th><%= sortable "asig_mensuales", "Asignación Mensual", @mes_nombre, @mes, @anio  %></th>
+      <th><%= sortable "liquido", "Liquido", @mes_nombre, @mes, @anio  %></th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <% @sueldos.each do |sueldo| %>
+      <tr>
+        <td><%= link_to sueldo.nombre.strip.titleize + " " + sueldo.apellido.strip.titleize, sueldos_detail_path(nombre: sueldo.nombre, apellido: sueldo.apellido) %></td></td>
+        <td><%= sueldo.cargo %></td>  
+        <td><%= number_to_currency(sueldo.asig_mensuales) %></td>              
+        <td><%= number_to_currency(sueldo.liquido) %></td>
+       </tr>
+    <% end %>
+  </tbody>
+</table>
+ 
+<br>

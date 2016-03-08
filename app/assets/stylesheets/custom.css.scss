@@ -1,0 +1,98 @@
+@import "bootstrap";
+
+ .navbar-inverse{background: #FFD300}
+
+ .navbar-inverse .navbar-nav > .active > a, 
+ .navbar-inverse .navbar-nav > .active > a:hover, 
+ .navbar-inverse .navbar-nav > .active > a:focus {
+      color: black;
+      background: #FFD300;
+ }
+ 
+.navbar .nav > li > a{
+    color:  black;
+}
+
+
+.navbar .nav > li > a:hover, 
+.navbar .nav > li > a:focus {
+    color:  #A68900;
+}
+
+.navbar-inverse .navbar-brand {
+    color: black;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+    color: #A68900;
+}
+
+/* Morris.js flying label */ 
+.morris-hover{position:absolute;z-index:1000;}
+.morris-hover.morris-default-style{border-radius:10px;padding:6px;color:#666;background:rgba(255, 255, 255, 0.8);border:solid 2px rgba(230, 230, 230, 0.8);font-family:sans-serif;font-size:12px;text-align:center;}
+.morris-hover.morris-default-style .morris-hover-row-label{font-weight:bold;margin:0.25em 0;}
+.morris-hover.morris-default-style .morris-hover-point{white-space:nowrap;margin:0.1em 0;}
+
+/* Morris.js So that the x labels won be cropped */ 
+#sueldos-graph { 
+    height:450px; 
+    padding-bottom:60px;
+} 
+
+/* File upload button */
+/* 
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 999px;
+    text-align: right;
+    filter: alpha(opacity=50);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+*/
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+/* Arrows for sortable columns */
+
+.current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.asc { 
+  background-image: url(/images/up_arrow.gif); 
+}
+
+.desc { 
+  background-image: url(/images/down_arrow.gif); 
+}
+
+
