@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
+ruby "2.2.1"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.3'
+#gem 'rails', '4.0.3'
+gem 'rails', '4.2.6'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -11,17 +13,20 @@ gem "active_record_group_count"
 gem 'ransack'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+#gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 
 gem 'bootstrap-sass'
+
 gem 'will_paginate'
+
 gem 'bootstrap-will_paginate'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.1.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
@@ -33,7 +38,9 @@ gem 'jquery-rails'
 # gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder', '~> 2.0'
+
+gem 'yaml_db'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -42,6 +49,12 @@ end
 
 
 gem "brakeman", :require => false
+
+group :development, :test do
+  gem 'rspec-rails', '3.4'
+  gem 'pry'
+  gem 'hirb'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

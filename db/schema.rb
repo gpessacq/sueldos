@@ -13,19 +13,19 @@
 
 ActiveRecord::Schema.define(version: 20140428155501) do
 
-  create_table "sueldos", force: true do |t|
+  create_table "sueldos", force: :cascade do |t|
     t.integer  "anio"
     t.integer  "nromes"
-    t.string   "apellido"
-    t.string   "nombre"
-    t.string   "cargo"
+    t.string   "apellido",             limit: 255
+    t.string   "nombre",               limit: 255
+    t.string   "cargo",                limit: 255
     t.decimal  "asig_mensuales"
     t.decimal  "salario_familiar"
     t.decimal  "descuentos_mensuales"
     t.decimal  "liquido"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "mes"
+    t.string   "mes",                  limit: 255
   end
 
 end
