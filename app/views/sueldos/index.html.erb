@@ -19,7 +19,7 @@ uno de ellos, seleccionar una vista de detalle + gráfico de los sueldos.
     <% @sueldos.each do |fecha| %>
       <tr>
         <td><%= fecha.nromes.to_s + "-" + fecha.anio.to_s %></td>
-        <td><%= link_to "Detalle + Gráfico", sueldos_show_path(fecha_mes: fecha.mes, fecha_nromes: fecha.nromes, fecha_anio: fecha.anio), id: "news", class: "btn btn-info" %></td>
+		<td><%= link_to "Detalle + Gráfico", sueldo_path( :action => 'show', id: fecha.id, fecha_mes: fecha.mes, fecha_nromes: fecha.nromes, fecha_anio: fecha.anio), id: "news", class: "btn btn-info" %></td>
       </tr>
     <% end %>
  

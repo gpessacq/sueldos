@@ -1,10 +1,10 @@
 class SueldosController < ApplicationController
-  http_basic_authenticate_with name: "admin", password: "password", except: [:home,:show,:detail]
+  http_basic_authenticate_with name: "admin", password: "password", except: [:index, :show,:detail]
   helper_method :sort_column, :sort_direction
   
-  def home
+  def index
     sueldos_count = Sueldo.group(:anio, :nromes).count.size
-    @sueldos = Sueldo.select(:nromes, :mes, :anio).paginate(:page => params[:page], 
+    @sueldos = Sueldo.select(:id, :nromes, :mes, :anio).group(:anio, :nromes).paginate(:page => params[:page], 
                                                             :per_page => 12, :total_entries => sueldos_count).distinct.order("anio DESC", "nromes DESC")
   end
   

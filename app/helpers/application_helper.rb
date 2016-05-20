@@ -4,7 +4,7 @@ module ApplicationHelper
     css_class = (column == sort_column) ? "current #{sort_direction}" : nil
     direction = (column == sort_column && sort_direction == "asc") ? "desc" : "asc"
     
-    link_to title, sueldos_show_path(sort: column, direction: direction, fecha_mes: mes_nombre, fecha_nromes: mes, fecha_anio: anio), class: css_class
+    link_to title, sueldo_path(sort: column, direction: direction, fecha_mes: mes_nombre, fecha_nromes: mes, fecha_anio: anio), class: css_class
   end
   
   def sortable_home(column, title = nil, mes, anio)
